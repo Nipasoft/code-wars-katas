@@ -1,0 +1,19 @@
+(function () { 
+	var globalScope = this,
+		exports = {};
+		
+	exports.Span = function (array, functionToSpan) {
+		var spannedArray = [];
+		
+		for(var i = 0; i < array.length-1; i++) {
+			if(functionToSpan(array[i])) {
+				spannedArray.push(array.slice(0,i));
+				spannedArray.push(array.slice(i,arrayLength))	
+			}
+			return spannedArray; 	
+		}	
+	};
+	
+	globalScope.spanModule = exports;
+	
+})();
