@@ -2,17 +2,21 @@
 	var globalScope = this,
 		exports = {};
 		
-	exports.Span = function (array, functionToSpan) {
-		var spannedArray = [];
-		
-		for(var i = 0; i < array.length-1; i++) {
-			if(functionToSpan(array[i])) {
-				spannedArray.push(array.slice(0,i));
-				spannedArray.push(array.slice(i,arrayLength))	
+	exports.Span = function span (arr, functionToSpan) {
+		var spannedArray = [],
+		    indexToSpan= arr.length;
+	       
+		for(var i = 0; i < arr.length; i++) {
+			if(!functionToSpan(arr[i])) {		
+				indexToSpan = i;
+				break;
 			}
-			return spannedArray; 	
-		}	
-	};
+		}		
+			
+		spannedArray.push(arr.slice(0,indexToSpan));
+		spannedArray.push(arr.slice(indexToSpan,arr.length));
+	 	return spannedArray;	
+	}	
 	
 	globalScope.spanModule = exports;
 	
