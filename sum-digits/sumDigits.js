@@ -9,7 +9,7 @@
 	  while(tempNumber > 0) {
 	    sum = sum + (tempNumber % 10);
 	    tempNumber =  Math.floor(tempNumber/10);
-	    }
+	  }
       return sum
 	}	
 	

@@ -2,7 +2,7 @@
 	var globalScope = this,
 		exports = {};
 		
-	exports.Span = function span (arr, functionToSpan) {
+	exports.Span = function (arr, functionToSpan) {
 		var spannedArray = [],
 		    indexToSpan= arr.length;
 	       

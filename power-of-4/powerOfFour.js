@@ -3,8 +3,17 @@
 		exports = {};
 		
 		exports.powerOf4 = function (n) {
-			if(n !== 0) {
-				
+		var isPowerOf4 = false;
+		
+			if ((typeof n === "number") && (n % 4 === 0) && !(n === 0)) {
+				isPowerOf4 = true;	
 			}
+			
+		return isPowerOf4;
 		}
+	globalScope.powerOf4Module = exports;
 })();
+
+console.log(powerOf4Module.powerOf4(undefined));
+console.log(powerOf4Module.powerOf4("16"));
+console.log(powerOf4Module.powerOf4(16));
