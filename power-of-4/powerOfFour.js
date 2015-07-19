@@ -5,7 +5,7 @@
 		exports.powerOf4 = function (n) {
 		var isPowerOf4 = false;
 		
-			if ((typeof n === "number") && (n % 4 === 0) && !(n === 0)) {
+			if ((typeof n === "number") && (n % 4 === 0) && !(n === 0) && (n === Math.abs(n))) {
 				isPowerOf4 = true;	
 			}
 			
